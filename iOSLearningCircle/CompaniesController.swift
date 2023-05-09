@@ -7,14 +7,14 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class CompaniesController: UITableViewController {
     
     let companies: [Company] = Company.samples
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.title = "Table"
+        navigationItem.title = "Companies"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
@@ -27,7 +27,7 @@ class TableViewController: UITableViewController {
 
 // MARK: - UITableViewDataSource
 
-extension TableViewController {
+extension CompaniesController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         companies.count
     }
@@ -43,7 +43,7 @@ extension TableViewController {
 
 // MARK: - UITableViewDelegate
 
-extension TableViewController {
+extension CompaniesController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
