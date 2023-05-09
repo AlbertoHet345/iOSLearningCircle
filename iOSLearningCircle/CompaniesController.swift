@@ -36,8 +36,7 @@ extension CompaniesController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyCell", for: indexPath) as! CompanyCell
         let company = companies[indexPath.row]
-        cell.companyNameLabel.text = company.name
-        cell.companyImageView.image = UIImage(systemName: "person.crop.circle.dashed")
+        cell.configure(company: company)
         return cell
     }
 }
