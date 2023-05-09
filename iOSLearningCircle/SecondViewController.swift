@@ -9,29 +9,25 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var myLabel: UILabel!
-    var contador: Int?
-    var nombre: String?
+    @IBOutlet weak var companyImageView: UIImageView!
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var founderLabel: UILabel!
+    @IBOutlet weak var foundationYearLabel: UILabel!
+    var company: Company?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .never
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        guard let counter = contador else { return }
-//        myLabel.text = "El valor del contador es: \(counter)"
-        
-        guard let nombre = nombre else { return }
-        myLabel.text = "Nombre: \(nombre)"
+        guard let company = company else { return }
+        companyImageView.image = UIImage(named: company.image)
+        companyNameLabel.text = company.name
+        founderLabel.text = "Founder: \(company.founder)"
+        foundationYearLabel.text = "Foundation year: \(company.foundationYear)"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

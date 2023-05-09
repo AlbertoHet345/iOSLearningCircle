@@ -47,7 +47,7 @@ extension CompaniesController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
-        controller.nombre = companies[indexPath.row].name
+        controller.company = companies[indexPath.row]
         navigationController?.pushViewController(controller, animated: true)
     }
 }
