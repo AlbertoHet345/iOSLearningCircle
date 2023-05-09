@@ -76,9 +76,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="El valor del contador es: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-Yl-f6W">
-                                <rect key="frame" x="59" y="229" width="274" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwf-ba-rF1">
+                                <rect key="frame" x="132.66666666666666" y="85" width="127.99999999999997" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Bea-ai-dIz"/>
+                                    <constraint firstAttribute="width" constant="128" id="tQC-ts-S5I"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T7-qC-wh2">
+                                <rect key="frame" x="77.666666666666671" y="267" width="237.66666666666663" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foundation year: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOI-Ex-dd0">
+                                <rect key="frame" x="16" y="374.33333333333331" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founder: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-Yl-f6W">
+                                <rect key="frame" x="16" y="337.33333333333331" width="361" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,6 +104,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="61O-in-Hjs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2T7-qC-wh2" firstAttribute="top" secondItem="fwf-ba-rF1" secondAttribute="bottom" constant="54" id="4kR-Xs-efE"/>
+                            <constraint firstItem="fwf-ba-rF1" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="5ch-xb-1ss"/>
+                            <constraint firstItem="rfb-Yl-f6W" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="8mj-gY-VfM"/>
+                            <constraint firstItem="kOI-Ex-dd0" firstAttribute="top" secondItem="rfb-Yl-f6W" secondAttribute="bottom" constant="16" id="AVX-US-R7z"/>
+                            <constraint firstItem="rfb-Yl-f6W" firstAttribute="top" secondItem="2T7-qC-wh2" secondAttribute="bottom" constant="32" id="akc-dh-vib"/>
+                            <constraint firstItem="2T7-qC-wh2" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="kGB-Lv-56R"/>
+                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="rfb-Yl-f6W" secondAttribute="trailing" constant="16" id="o46-0r-ls7"/>
+                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="kOI-Ex-dd0" secondAttribute="trailing" constant="16" id="tVj-t9-UGI"/>
+                            <constraint firstItem="kOI-Ex-dd0" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="tqV-Rp-3mV"/>
+                            <constraint firstItem="fwf-ba-rF1" firstAttribute="top" secondItem="61O-in-Hjs" secondAttribute="top" constant="26" id="wzr-i7-yHG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xss-Ss-A0D"/>
                     <connections>
