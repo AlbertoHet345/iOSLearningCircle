@@ -7,9 +7,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
+class TableViewController: UITableViewController {
     
     let companies: [Company] = Company.samples
     
@@ -22,18 +20,17 @@ class TableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellId")
     }
 
 }
 
-extension TableViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension TableViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         companies.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
         let company = companies[indexPath.row]
         cell.textLabel?.text = company.name
@@ -42,8 +39,8 @@ extension TableViewController: UITableViewDataSource {
     }
 }
 
-extension TableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension TableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
         controller.nombre = companies[indexPath.row].name
