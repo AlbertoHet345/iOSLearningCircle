@@ -11,8 +11,8 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var companyImageView: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
-    @IBOutlet weak var founderLabel: UILabel!
-    @IBOutlet weak var foundationYearLabel: UILabel!
+    @IBOutlet weak var founderTextField: UITextField!
+    @IBOutlet weak var foundationYearTextField: UITextField!
     var company: Company?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,8 +26,8 @@ class SecondViewController: UIViewController {
         guard let company = company else { return }
         companyImageView.image = UIImage(named: company.image)
         companyNameLabel.text = company.name
-        founderLabel.text = "Founder: \(company.founder)"
-        foundationYearLabel.text = "Foundation year: \(company.foundationYear)"
+        founderTextField.text = "Founder: \(company.founder)"
+        foundationYearTextField.text = "Foundation year: \(company.foundationYear)"
     }
 
 }

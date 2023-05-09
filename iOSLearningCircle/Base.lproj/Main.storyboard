@@ -90,14 +90,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foundation year: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOI-Ex-dd0">
-                                <rect key="frame" x="16" y="342.33333333333331" width="361" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="342.33333333333331" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-PI-r3g">
+                                <rect key="frame" x="109.33333333333334" y="306.66666666666669" width="267.66666666666663" height="18.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87E-cD-6My">
+                                <rect key="frame" x="173" y="343.66666666666669" width="204" height="18.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founder: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-Yl-f6W">
-                                <rect key="frame" x="16" y="305.33333333333331" width="361" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="305.33333333333331" width="77.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -107,12 +117,16 @@
                         <constraints>
                             <constraint firstItem="2T7-qC-wh2" firstAttribute="top" secondItem="fwf-ba-rF1" secondAttribute="bottom" constant="32" id="4kR-Xs-efE"/>
                             <constraint firstItem="fwf-ba-rF1" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="5ch-xb-1ss"/>
+                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="87E-cD-6My" secondAttribute="trailing" constant="16" id="5ht-Do-YHZ"/>
+                            <constraint firstItem="87E-cD-6My" firstAttribute="leading" secondItem="kOI-Ex-dd0" secondAttribute="trailing" constant="16" id="7Ul-pU-ezf"/>
                             <constraint firstItem="rfb-Yl-f6W" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="8mj-gY-VfM"/>
                             <constraint firstItem="kOI-Ex-dd0" firstAttribute="top" secondItem="rfb-Yl-f6W" secondAttribute="bottom" constant="16" id="AVX-US-R7z"/>
+                            <constraint firstItem="87E-cD-6My" firstAttribute="centerY" secondItem="kOI-Ex-dd0" secondAttribute="centerY" id="JJb-b8-BC6"/>
+                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="gwu-PI-r3g" secondAttribute="trailing" constant="16" id="PV7-GT-jMF"/>
+                            <constraint firstItem="gwu-PI-r3g" firstAttribute="centerY" secondItem="rfb-Yl-f6W" secondAttribute="centerY" id="QIV-7B-eTq"/>
                             <constraint firstItem="rfb-Yl-f6W" firstAttribute="top" secondItem="2T7-qC-wh2" secondAttribute="bottom" constant="32" id="akc-dh-vib"/>
                             <constraint firstItem="2T7-qC-wh2" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="kGB-Lv-56R"/>
-                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="rfb-Yl-f6W" secondAttribute="trailing" constant="16" id="o46-0r-ls7"/>
-                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="kOI-Ex-dd0" secondAttribute="trailing" constant="16" id="tVj-t9-UGI"/>
+                            <constraint firstItem="gwu-PI-r3g" firstAttribute="leading" secondItem="rfb-Yl-f6W" secondAttribute="trailing" constant="16" id="nf9-kD-OLz"/>
                             <constraint firstItem="kOI-Ex-dd0" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="tqV-Rp-3mV"/>
                             <constraint firstItem="fwf-ba-rF1" firstAttribute="top" secondItem="61O-in-Hjs" secondAttribute="top" constant="16" id="wzr-i7-yHG"/>
                         </constraints>
@@ -121,8 +135,8 @@
                     <connections>
                         <outlet property="companyImageView" destination="fwf-ba-rF1" id="9Jv-DX-zaA"/>
                         <outlet property="companyNameLabel" destination="2T7-qC-wh2" id="Aue-fX-2im"/>
-                        <outlet property="foundationYearLabel" destination="kOI-Ex-dd0" id="Kky-Wp-BtF"/>
-                        <outlet property="founderLabel" destination="rfb-Yl-f6W" id="Ucf-Kw-cxY"/>
+                        <outlet property="foundationYearTextField" destination="87E-cD-6My" id="JrD-Q3-dMA"/>
+                        <outlet property="founderTextField" destination="gwu-PI-r3g" id="xhY-cI-sSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87F-Ii-jry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
