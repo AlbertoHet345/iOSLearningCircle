@@ -43,13 +43,13 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let controller = segue.destination as? SecondViewController else { return }
-        controller.contador = contador
+//        controller.contador = contador
     }
     
     private func goToNextView() {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
-        controller.contador = contador
+//        controller.contador = contador
         navigationController?.pushViewController(controller, animated: true)
     }
     
