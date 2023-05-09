@@ -25,6 +25,8 @@ class TableViewController: UITableViewController {
 
 }
 
+// MARK: - UITableViewDataSource
+
 extension TableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         companies.count
@@ -38,6 +40,8 @@ extension TableViewController {
         return cell
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension TableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
