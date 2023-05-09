@@ -14,6 +14,8 @@
 		CD614F3D29EF4CF00057E4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD614F3C29EF4CF00057E4AE /* Assets.xcassets */; };
 		CD614F4029EF4CF00057E4AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD614F3E29EF4CF00057E4AE /* LaunchScreen.storyboard */; };
 		CD79CA8129F890690006E384 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD79CA8029F890690006E384 /* SecondViewController.swift */; };
+		CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1AE512A0AE402007A1217 /* CompanyCell.swift */; };
+		CDC1AE542A0AE402007A1217 /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC1AE522A0AE402007A1217 /* CompanyCell.xib */; };
 		CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE651F2A01C4A600B205FF /* CompaniesController.swift */; };
 		CDDE65222A01CBF900B205FF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE65212A01CBF900B205FF /* Company.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		CD614F3F29EF4CF00057E4AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD614F4129EF4CF00057E4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD79CA8029F890690006E384 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CDC1AE512A0AE402007A1217 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
+		CDC1AE522A0AE402007A1217 /* CompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
 		CDDE651F2A01C4A600B205FF /* CompaniesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesController.swift; sourceTree = "<group>"; };
 		CDDE65212A01CBF900B205FF /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,8 @@
 				CD614F4129EF4CF00057E4AE /* Info.plist */,
 				CD79CA8029F890690006E384 /* SecondViewController.swift */,
 				CDDE65212A01CBF900B205FF /* Company.swift */,
+				CDC1AE512A0AE402007A1217 /* CompanyCell.swift */,
+				CDC1AE522A0AE402007A1217 /* CompanyCell.xib */,
 			);
 			path = iOSLearningCircle;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				CD614F4029EF4CF00057E4AE /* LaunchScreen.storyboard in Resources */,
 				CD614F3D29EF4CF00057E4AE /* Assets.xcassets in Resources */,
 				CD614F3B29EF4CEE0057E4AE /* Main.storyboard in Resources */,
+				CDC1AE542A0AE402007A1217 /* CompanyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +157,7 @@
 				CD79CA8129F890690006E384 /* SecondViewController.swift in Sources */,
 				CD614F3829EF4CEE0057E4AE /* ViewController.swift in Sources */,
 				CD614F3429EF4CEE0057E4AE /* AppDelegate.swift in Sources */,
+				CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */,
 				CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */,
 				CD614F3629EF4CEE0057E4AE /* SceneDelegate.swift in Sources */,
 				CDDE65222A01CBF900B205FF /* Company.swift in Sources */,
