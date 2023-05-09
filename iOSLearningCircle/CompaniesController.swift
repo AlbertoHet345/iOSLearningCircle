@@ -20,7 +20,8 @@ class CompaniesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellId")
+        tableView.register(UINib(nibName: "CompanyCell", bundle: .main),
+                           forCellReuseIdentifier: "CompanyCell")
     }
 
 }
@@ -33,10 +34,10 @@ extension CompaniesController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyCell", for: indexPath) as! CompanyCell
         let company = companies[indexPath.row]
-        cell.textLabel?.text = company.name
-        cell.detailTextLabel?.text = "\(company.foundationYear)"
+        cell.companyNameLabel.text = company.name
+        cell.companyImageView.image = UIImage(systemName: "person.crop.circle.dashed")
         return cell
     }
 }
