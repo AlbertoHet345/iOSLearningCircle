@@ -22,8 +22,19 @@ class CompaniesController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "CompanyCell", bundle: .main),
                            forCellReuseIdentifier: "CompanyCell")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.square.fill"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(didTapAdd))
     }
-
+    
+    @objc
+    private func didTapAdd() {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
+        present(controller, animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource

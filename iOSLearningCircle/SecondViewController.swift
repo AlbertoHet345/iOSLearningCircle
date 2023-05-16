@@ -23,7 +23,10 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let company = company else { return }
+        guard let company = company else {
+            companyImageView.image = UIImage(systemName: "person.crop.circle.dashed")
+            return
+        }
         companyImageView.image = UIImage(named: company.image)
         companyNameLabel.text = company.name
         founderTextField.text = "Founder: \(company.founder)"
