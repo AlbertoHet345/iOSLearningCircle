@@ -9,7 +9,7 @@ import UIKit
 
 class CompaniesController: UITableViewController {
     
-    let companies: [Company] = Company.samples
+    var companies: [Company] = Company.samples
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,8 +32,10 @@ class CompaniesController: UITableViewController {
     @objc
     private func didTapAdd() {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
-        present(controller, animated: true)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "CreateCompanyController") as? CreateCompanyController else { return }
+        controller.delegate = self
+        let navController = UINavigationController(rootViewController: controller)
+        present(navController, animated: true)
     }
 }
 
@@ -57,8 +59,17 @@ extension CompaniesController {
 extension CompaniesController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        guard let controller = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "CreateCompanyController") as? CreateCompanyController else { return }
         controller.company = companies[indexPath.row]
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+// MARK: - CreateCompanyDelegate
+
+extension CompaniesController: CreateCompanyDelegate {
+    func createCompanyController(_ createCompanyController: CreateCompanyController, didCreateCompany company: Company) {
+        companies.append(company)
+        tableView.reloadData()
     }
 }
