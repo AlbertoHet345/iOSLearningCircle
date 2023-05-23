@@ -14,6 +14,6 @@ class CompanyCell: UITableViewCell {
     
     func configure(company: Company) {
         companyNameLabel.text = company.name
-        companyImageView.image = UIImage(named: company.image)
+//        companyImageView.image = UIImage(named: company.image)
     }
 }

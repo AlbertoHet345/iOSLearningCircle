@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol CreateCompanyDelegate: AnyObject {
     func createCompanyController(_ createCompanyController: CreateCompanyController, didCreateCompany company: Company)
@@ -41,10 +42,10 @@ class CreateCompanyController: UIViewController {
             companyImageView.image = UIImage(systemName: "person.crop.circle.dashed")
             return
         }
-        companyImageView.image = UIImage(named: company.image)
+//        companyImageView.image = UIImage(named: company.image)
         companyNameTextField.text = company.name
-        founderTextField.text = "Founder: \(company.founder)"
-        foundationYearTextField.text = "Foundation year: \(company.foundationYear)"
+//        founderTextField.text = "Founder: \(company.founder)"
+//        foundationYearTextField.text = "Foundation year: \(company.foundationYear)"
         
     }
     @IBAction func didTapSelectImage(_ sender: Any) {
@@ -67,16 +68,31 @@ class CreateCompanyController: UIViewController {
     }
     
     private func didTapSave() {
-        guard let name = companyNameTextField.text,
-              let founder = founderTextField.text,
-              let foundationYearString = foundationYearTextField.text,
-              let foundationYear = Int(foundationYearString) else { return }
-        let companyCreated = Company(name: name,
-                                     foundationYear: foundationYear,
-                                     founder: founder,
-                                     image: "person.crop.circle.dashed")
-        delegate?.createCompanyController(self, didCreateCompany: companyCreated)
-        dismiss(animated: true)
+        let context = CoreDataMaager.shared.context
+        
+        let company = NSEntityDescription.insertNewObject(forEntityName: "Company", into: context)
+        company.setValue(companyNameTextField.text, forKey: "name")
+        
+        do {
+            try context.save()
+            dismiss(animated: true) { [weak self] in
+                guard let self = self else { return }
+                self.delegate?.createCompanyController(self, didCreateCompany: company as! Company)
+            }
+        } catch {
+            print("Failed to save company: \(error)")
+        }
+        
+        
+//        guard let name = companyNameTextField.text,
+//              let founder = founderTextField.text,
+//              let foundationYearString = foundationYearTextField.text,
+//              let foundationYear = Int(foundationYearString) else { return }
+//        let companyCreated = Company(name: name,
+//                                     foundationYear: foundationYear,
+//                                     founder: founder,
+//                                     image: "person.crop.circle.dashed")
+        
     }
 
 }

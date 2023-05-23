@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class CompaniesController: UITableViewController {
     
-    var companies: [Company] = Company.samples
+    var companies: [Company] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,6 +28,8 @@ class CompaniesController: UITableViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAdd))
+        
+        fetchCompanies()
     }
     
     @objc
@@ -36,6 +39,22 @@ class CompaniesController: UITableViewController {
         controller.delegate = self
         let navController = UINavigationController(rootViewController: controller)
         present(navController, animated: true)
+    }
+    
+    private func fetchCompanies() {
+
+        let context = CoreDataMaager.shared.context
+        
+        let fetchRequest = NSFetchRequest<Company>(entityName: "Company")
+        
+        do {
+            let companies = try context.fetch(fetchRequest)
+            self.companies = companies
+            tableView.reloadData()
+        } catch let fetchError {
+            print("Failed to fetch companies: \(fetchError)")
+        }
+        
     }
 }
 
@@ -63,6 +82,17 @@ extension CompaniesController {
         controller.company = companies[indexPath.row]
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive,
+                                        title: "Delete") { [weak self] _, _, completionHandler in
+            guard let self = self else { return }
+            self.companies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            completionHandler(true)
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 }
 
 // MARK: - CreateCompanyDelegate
@@ -70,6 +100,8 @@ extension CompaniesController {
 extension CompaniesController: CreateCompanyDelegate {
     func createCompanyController(_ createCompanyController: CreateCompanyController, didCreateCompany company: Company) {
         companies.append(company)
-        tableView.reloadData()
+        
+        let indexPath = IndexPath(row: companies.count - 1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
     }
 }
