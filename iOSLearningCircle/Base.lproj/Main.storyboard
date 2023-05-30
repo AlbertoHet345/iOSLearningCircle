@@ -84,34 +84,37 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foundation year: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOI-Ex-dd0">
-                                <rect key="frame" x="16" y="327.33333333333331" width="141" height="21"/>
+                                <rect key="frame" x="16" y="380.66666666666669" width="141" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter founder name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-PI-r3g">
-                                <rect key="frame" x="109.33333333333334" y="291.33333333333331" width="267.66666666666663" height="18.666666666666686"/>
+                                <rect key="frame" x="109.33333333333334" y="344.66666666666669" width="267.66666666666663" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87E-cD-6My">
-                                <rect key="frame" x="173" y="328.66666666666669" width="204" height="18.666666666666686"/>
+                                <rect key="frame" x="173" y="382" width="204" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founder: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-Yl-f6W">
-                                <rect key="frame" x="16" y="290" width="77.333333333333329" height="21.333333333333314"/>
+                                <rect key="frame" x="16" y="343.33333333333331" width="77.333333333333329" height="21.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="06V-nd-g8J">
-                                <rect key="frame" x="32" y="238" width="329" height="18.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter company name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="06V-nd-g8J">
+                                <rect key="frame" x="32" y="262" width="329" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="5tm-ih-a6i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-7O-a2g">
-                                <rect key="frame" x="135" y="202" width="123" height="35"/>
+                                <rect key="frame" x="135" y="211" width="123" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select image"/>
                                 <connections>
@@ -123,7 +126,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PiL-7O-a2g" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="1gH-uA-fPg"/>
-                            <constraint firstItem="PiL-7O-a2g" firstAttribute="top" secondItem="fwf-ba-rF1" secondAttribute="bottom" constant="-1" id="58z-dx-u4s"/>
                             <constraint firstItem="fwf-ba-rF1" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="5ch-xb-1ss"/>
                             <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="87E-cD-6My" secondAttribute="trailing" constant="16" id="5ht-Do-YHZ"/>
                             <constraint firstItem="87E-cD-6My" firstAttribute="leading" secondItem="kOI-Ex-dd0" secondAttribute="trailing" constant="16" id="7Ul-pU-ezf"/>
@@ -132,13 +134,14 @@
                             <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="06V-nd-g8J" secondAttribute="trailing" constant="32" id="Djd-GX-QJS"/>
                             <constraint firstItem="gwu-PI-r3g" firstAttribute="top" secondItem="06V-nd-g8J" secondAttribute="bottom" constant="34.666666666666686" id="FoI-xg-eTA"/>
                             <constraint firstItem="87E-cD-6My" firstAttribute="centerY" secondItem="kOI-Ex-dd0" secondAttribute="centerY" id="JJb-b8-BC6"/>
+                            <constraint firstItem="PiL-7O-a2g" firstAttribute="top" secondItem="fwf-ba-rF1" secondAttribute="bottom" constant="8" id="Lqf-sC-gCk"/>
                             <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="gwu-PI-r3g" secondAttribute="trailing" constant="16" id="PV7-GT-jMF"/>
                             <constraint firstItem="gwu-PI-r3g" firstAttribute="centerY" secondItem="rfb-Yl-f6W" secondAttribute="centerY" id="QIV-7B-eTq"/>
-                            <constraint firstItem="06V-nd-g8J" firstAttribute="top" secondItem="fwf-ba-rF1" secondAttribute="bottom" constant="35" id="ckL-fa-na2"/>
                             <constraint firstItem="gwu-PI-r3g" firstAttribute="leading" secondItem="rfb-Yl-f6W" secondAttribute="trailing" constant="16" id="nf9-kD-OLz"/>
                             <constraint firstItem="06V-nd-g8J" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="32" id="pkO-ta-kRd"/>
                             <constraint firstItem="rfb-Yl-f6W" firstAttribute="top" secondItem="06V-nd-g8J" secondAttribute="bottom" constant="33.333333333333314" id="s18-Zb-GGE"/>
                             <constraint firstItem="kOI-Ex-dd0" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="tqV-Rp-3mV"/>
+                            <constraint firstItem="06V-nd-g8J" firstAttribute="top" secondItem="PiL-7O-a2g" secondAttribute="bottom" constant="16" id="uZq-Y9-Z55"/>
                             <constraint firstItem="fwf-ba-rF1" firstAttribute="top" secondItem="61O-in-Hjs" secondAttribute="top" constant="16" id="wzr-i7-yHG"/>
                         </constraints>
                     </view>

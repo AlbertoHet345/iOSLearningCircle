@@ -14,6 +14,7 @@ class CompanyCell: UITableViewCell {
     
     func configure(company: Company) {
         companyNameLabel.text = company.name
+        companyImageView.image = UIImage(systemName: "person.crop.circle.dashed")
 //        companyImageView.image = UIImage(named: company.image)
     }
 }
