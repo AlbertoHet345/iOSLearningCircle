@@ -91,13 +91,34 @@ extension CompaniesController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
             completionHandler(true)
         }
-        return UISwipeActionsConfiguration(actions: [action])
+        
+        let editAction = UIContextualAction(style: .normal,
+                                            title: "Edit") { [weak self] _, _, completionHandler in
+            guard let self = self else { return }
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "CreateCompanyController") as? CreateCompanyController else { return }
+            controller.company = self.companies[indexPath.row]
+            controller.delegate = self
+            let navController = UINavigationController(rootViewController: controller)
+            self.present(navController, animated: true)
+            completionHandler(true)
+        }
+        editAction.backgroundColor = .systemBlue
+        
+        return UISwipeActionsConfiguration(actions: [action, editAction])
     }
 }
 
 // MARK: - CreateCompanyDelegate
 
 extension CompaniesController: CreateCompanyDelegate {
+    func createCompanyController(_ createCompanyController: CreateCompanyController, didEditCompany company: Company) {
+        guard let row = companies.firstIndex(of: company) else { return }
+        
+        let indexPath = IndexPath(row: row, section: 0)
+        tableView.reloadRows(at: [indexPath], with: .middle)
+    }
+    
     func createCompanyController(_ createCompanyController: CreateCompanyController, didCreateCompany company: Company) {
         companies.append(company)
         

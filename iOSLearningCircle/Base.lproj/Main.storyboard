@@ -83,19 +83,14 @@
                                     <constraint firstAttribute="width" constant="128" id="tQC-ts-S5I"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foundation year: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOI-Ex-dd0">
-                                <rect key="frame" x="16" y="380.66666666666669" width="141" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foundation date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOI-Ex-dd0">
+                                <rect key="frame" x="16" y="380.66666666666669" width="142" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter founder name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-PI-r3g">
                                 <rect key="frame" x="109.33333333333334" y="344.66666666666669" width="267.66666666666663" height="18.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87E-cD-6My">
-                                <rect key="frame" x="173" y="382" width="204" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -121,35 +116,42 @@
                                     <action selector="didTapSelectImage:" destination="GwH-Y2-OCm" eventType="touchUpInside" id="ugn-FK-j8c"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-nF-vaH">
+                                <rect key="frame" x="166" y="364" width="190" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2xK-Bg-hsb"/>
+                                </constraints>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="61O-in-Hjs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PiL-7O-a2g" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="1gH-uA-fPg"/>
                             <constraint firstItem="fwf-ba-rF1" firstAttribute="centerX" secondItem="61O-in-Hjs" secondAttribute="centerX" id="5ch-xb-1ss"/>
-                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="87E-cD-6My" secondAttribute="trailing" constant="16" id="5ht-Do-YHZ"/>
-                            <constraint firstItem="87E-cD-6My" firstAttribute="leading" secondItem="kOI-Ex-dd0" secondAttribute="trailing" constant="16" id="7Ul-pU-ezf"/>
                             <constraint firstItem="rfb-Yl-f6W" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="8mj-gY-VfM"/>
                             <constraint firstItem="kOI-Ex-dd0" firstAttribute="top" secondItem="rfb-Yl-f6W" secondAttribute="bottom" constant="16" id="AVX-US-R7z"/>
                             <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="06V-nd-g8J" secondAttribute="trailing" constant="32" id="Djd-GX-QJS"/>
                             <constraint firstItem="gwu-PI-r3g" firstAttribute="top" secondItem="06V-nd-g8J" secondAttribute="bottom" constant="34.666666666666686" id="FoI-xg-eTA"/>
-                            <constraint firstItem="87E-cD-6My" firstAttribute="centerY" secondItem="kOI-Ex-dd0" secondAttribute="centerY" id="JJb-b8-BC6"/>
                             <constraint firstItem="PiL-7O-a2g" firstAttribute="top" secondItem="fwf-ba-rF1" secondAttribute="bottom" constant="8" id="Lqf-sC-gCk"/>
                             <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="gwu-PI-r3g" secondAttribute="trailing" constant="16" id="PV7-GT-jMF"/>
                             <constraint firstItem="gwu-PI-r3g" firstAttribute="centerY" secondItem="rfb-Yl-f6W" secondAttribute="centerY" id="QIV-7B-eTq"/>
+                            <constraint firstItem="hcQ-nF-vaH" firstAttribute="leading" secondItem="kOI-Ex-dd0" secondAttribute="trailing" constant="8" symbolic="YES" id="RHB-GB-Ea6"/>
+                            <constraint firstItem="hcQ-nF-vaH" firstAttribute="top" secondItem="gwu-PI-r3g" secondAttribute="bottom" constant="0.66666666666668561" id="bGQ-Zf-8Vb"/>
+                            <constraint firstItem="hcQ-nF-vaH" firstAttribute="centerY" secondItem="kOI-Ex-dd0" secondAttribute="centerY" id="jG2-Gh-1uO"/>
                             <constraint firstItem="gwu-PI-r3g" firstAttribute="leading" secondItem="rfb-Yl-f6W" secondAttribute="trailing" constant="16" id="nf9-kD-OLz"/>
                             <constraint firstItem="06V-nd-g8J" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="32" id="pkO-ta-kRd"/>
                             <constraint firstItem="rfb-Yl-f6W" firstAttribute="top" secondItem="06V-nd-g8J" secondAttribute="bottom" constant="33.333333333333314" id="s18-Zb-GGE"/>
                             <constraint firstItem="kOI-Ex-dd0" firstAttribute="leading" secondItem="61O-in-Hjs" secondAttribute="leading" constant="16" id="tqV-Rp-3mV"/>
                             <constraint firstItem="06V-nd-g8J" firstAttribute="top" secondItem="PiL-7O-a2g" secondAttribute="bottom" constant="16" id="uZq-Y9-Z55"/>
                             <constraint firstItem="fwf-ba-rF1" firstAttribute="top" secondItem="61O-in-Hjs" secondAttribute="top" constant="16" id="wzr-i7-yHG"/>
+                            <constraint firstItem="61O-in-Hjs" firstAttribute="trailing" secondItem="hcQ-nF-vaH" secondAttribute="trailing" constant="37" id="zZh-K8-hjV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xss-Ss-A0D"/>
                     <connections>
                         <outlet property="companyImageView" destination="fwf-ba-rF1" id="9Jv-DX-zaA"/>
                         <outlet property="companyNameTextField" destination="06V-nd-g8J" id="sZy-JD-o9T"/>
-                        <outlet property="foundationYearTextField" destination="87E-cD-6My" id="JrD-Q3-dMA"/>
+                        <outlet property="datePicker" destination="hcQ-nF-vaH" id="hw5-8j-gMv"/>
                         <outlet property="founderTextField" destination="gwu-PI-r3g" id="xhY-cI-sSA"/>
                         <outlet property="selectImageButton" destination="PiL-7O-a2g" id="sNg-wD-6av"/>
                     </connections>
