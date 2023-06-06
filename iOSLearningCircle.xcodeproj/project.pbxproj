@@ -16,6 +16,7 @@
 		CD7139242A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD7139222A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld */; };
 		CD7139262A1D7D2C002A8248 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7139252A1D7D2C002A8248 /* CoreDataManager.swift */; };
 		CD79CA8129F890690006E384 /* CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD79CA8029F890690006E384 /* CreateCompanyController.swift */; };
+		CDC16DAC2A2FF1A100883192 /* UIImageView+CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */; };
 		CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1AE512A0AE402007A1217 /* CompanyCell.swift */; };
 		CDC1AE542A0AE402007A1217 /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC1AE522A0AE402007A1217 /* CompanyCell.xib */; };
 		CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE651F2A01C4A600B205FF /* CompaniesController.swift */; };
@@ -34,6 +35,7 @@
 		CD7139232A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSLearningCircleModels.xcdatamodel; sourceTree = "<group>"; };
 		CD7139252A1D7D2C002A8248 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		CD79CA8029F890690006E384 /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
+		CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircularImage.swift"; sourceTree = "<group>"; };
 		CDC1AE512A0AE402007A1217 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		CDC1AE522A0AE402007A1217 /* CompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
 		CDDE651F2A01C4A600B205FF /* CompaniesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				CDC1AE522A0AE402007A1217 /* CompanyCell.xib */,
 				CD7139222A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld */,
 				CD7139252A1D7D2C002A8248 /* CoreDataManager.swift */,
+				CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */,
 			);
 			path = iOSLearningCircle;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				CD7139262A1D7D2C002A8248 /* CoreDataManager.swift in Sources */,
 				CD614F3629EF4CEE0057E4AE /* SceneDelegate.swift in Sources */,
 				CDDE65222A01CBF900B205FF /* Company.swift in Sources */,
+				CDC16DAC2A2FF1A100883192 /* UIImageView+CircularImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
