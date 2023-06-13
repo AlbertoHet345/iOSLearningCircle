@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0A2E412A3920EB001323FF /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A2E402A3920EB001323FF /* HTTPClient.swift */; };
+		CD0A2E442A3929B2001323FF /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A2E432A3929B2001323FF /* ProductListView.swift */; };
 		CD614F3429EF4CEE0057E4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD614F3329EF4CEE0057E4AE /* AppDelegate.swift */; };
 		CD614F3629EF4CEE0057E4AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD614F3529EF4CEE0057E4AE /* SceneDelegate.swift */; };
 		CD614F3829EF4CEE0057E4AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD614F3729EF4CEE0057E4AE /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0A2E402A3920EB001323FF /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		CD0A2E432A3929B2001323FF /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		CD614F3029EF4CEE0057E4AE /* iOSLearningCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLearningCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD614F3329EF4CEE0057E4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD614F3529EF4CEE0057E4AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0A2E3C2A392083001323FF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD614F3729EF4CEE0057E4AE /* ViewController.swift */,
+				CDDE651F2A01C4A600B205FF /* CompaniesController.swift */,
+				CD79CA8029F890690006E384 /* CreateCompanyController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD0A2E3D2A39208E001323FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1AE512A0AE402007A1217 /* CompanyCell.swift */,
+				CDC1AE522A0AE402007A1217 /* CompanyCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD0A2E3E2A392096001323FF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD0A2E3F2A39209C001323FF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD7139252A1D7D2C002A8248 /* CoreDataManager.swift */,
+				CD0A2E402A3920EB001323FF /* HTTPClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CD0A2E422A39299A001323FF /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A2E432A3929B2001323FF /* ProductListView.swift */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
 		CD614F2729EF4CEE0057E4AE = {
 			isa = PBXGroup;
 			children = (
@@ -72,21 +120,19 @@
 		CD614F3229EF4CEE0057E4AE /* iOSLearningCircle */ = {
 			isa = PBXGroup;
 			children = (
+				CD0A2E422A39299A001323FF /* SwiftUIViews */,
+				CD0A2E3F2A39209C001323FF /* Service */,
+				CD0A2E3E2A392096001323FF /* Utils */,
+				CD0A2E3D2A39208E001323FF /* View */,
+				CD0A2E3C2A392083001323FF /* ViewController */,
 				CD614F3329EF4CEE0057E4AE /* AppDelegate.swift */,
 				CD614F3529EF4CEE0057E4AE /* SceneDelegate.swift */,
-				CD614F3729EF4CEE0057E4AE /* ViewController.swift */,
 				CD614F3929EF4CEE0057E4AE /* Main.storyboard */,
-				CDDE651F2A01C4A600B205FF /* CompaniesController.swift */,
 				CD614F3C29EF4CF00057E4AE /* Assets.xcassets */,
 				CD614F3E29EF4CF00057E4AE /* LaunchScreen.storyboard */,
 				CD614F4129EF4CF00057E4AE /* Info.plist */,
-				CD79CA8029F890690006E384 /* CreateCompanyController.swift */,
 				CDDE65212A01CBF900B205FF /* Company.swift */,
-				CDC1AE512A0AE402007A1217 /* CompanyCell.swift */,
-				CDC1AE522A0AE402007A1217 /* CompanyCell.xib */,
 				CD7139222A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld */,
-				CD7139252A1D7D2C002A8248 /* CoreDataManager.swift */,
-				CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */,
 			);
 			path = iOSLearningCircle;
 			sourceTree = "<group>";
@@ -163,12 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0A2E442A3929B2001323FF /* ProductListView.swift in Sources */,
 				CD79CA8129F890690006E384 /* CreateCompanyController.swift in Sources */,
 				CD614F3829EF4CEE0057E4AE /* ViewController.swift in Sources */,
 				CD614F3429EF4CEE0057E4AE /* AppDelegate.swift in Sources */,
 				CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */,
 				CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */,
 				CD7139242A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld in Sources */,
+				CD0A2E412A3920EB001323FF /* HTTPClient.swift in Sources */,
 				CD7139262A1D7D2C002A8248 /* CoreDataManager.swift in Sources */,
 				CD614F3629EF4CEE0057E4AE /* SceneDelegate.swift in Sources */,
 				CDDE65222A01CBF900B205FF /* Company.swift in Sources */,
@@ -248,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -302,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
