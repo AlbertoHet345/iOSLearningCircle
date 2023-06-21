@@ -23,6 +23,9 @@ struct Wrapper: Decodable {
 
 struct Product: Decodable {
     let title: String
+    let price: Double
+    let description: String
+    let images: [String]
 }
 
 final class HTTPClient {
@@ -38,11 +41,10 @@ final class HTTPClient {
         }
         
         let decoder = JSONDecoder()
-        guard let product = try? decoder.decode(Wrapper.self, from: data) else {
+        guard let wrapper = try? decoder.decode(Wrapper.self, from: data) else {
             throw HTTPError.decoding
         }
         
-        return product
+        return wrapper
     }
-    
 }
