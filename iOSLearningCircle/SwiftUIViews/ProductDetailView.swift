@@ -9,24 +9,44 @@ import SwiftUI
 
 struct ProductDetailView: View {
     let product: Product
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            HStack {
-                Text(product.title)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+        NavigationView {
+            VStack {
+                header
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 16) {
+                        ForEach(product.images, id: \.self) {
+                            if let url = URL(string: $0) {
+                                AsyncImage(url: url) {
+                                    $0
+                                        .resizable()
+                                        .frame(width: 256, height: 128)
+                                } placeholder: {
+                                    Image(systemName: "questionmark.folder")
+                                }
+                            }
+                        }
+                    }
+                }
                 
                 Spacer()
-                
-                Text("$\(product.price)")
             }
+            .navigationTitle(product.title)
+        }
+    }
+    
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 32) {
+            
+            Text("Price: $\(product.price)")
             
             Text(product.description)
                 .font(.body)
             
-            
-//            AsyncImage()
         }
+        .frame(maxWidth: 450)
         .padding(16)
     }
 }

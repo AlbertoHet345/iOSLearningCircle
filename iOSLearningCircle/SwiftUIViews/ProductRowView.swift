@@ -10,20 +10,18 @@ import SwiftUI
 struct ProductRowView: View {
     let product: Product
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        HStack(spacing: 16) {
             if let url = URL(string: product.images[0]) {
                 AsyncImage(url: url) { image in
                     image
-                        .resizable()
-                        .frame(width: 256, height: 128)
                 } placeholder: {
                     Image(systemName: "questionmark.folder")
-                        .resizable()
-                        .frame(width: 64, height: 64)
                 }
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 32, height: 32)
+                .clipShape(Circle())
                 
             }
-            
             
             Text(product.title)
                 .font(.system(size: 22))

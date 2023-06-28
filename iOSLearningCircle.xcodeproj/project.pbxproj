@@ -20,6 +20,7 @@
 		CD79CA8129F890690006E384 /* CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD79CA8029F890690006E384 /* CreateCompanyController.swift */; };
 		CD98E66F2A425D970059620E /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98E66E2A425D970059620E /* ProductRowView.swift */; };
 		CD98E6712A42640C0059620E /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98E6702A42640B0059620E /* ProductDetailView.swift */; };
+		CDB90C802A4CF24B0048220E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB90C7F2A4CF24B0048220E /* WelcomeView.swift */; };
 		CDC16DAC2A2FF1A100883192 /* UIImageView+CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */; };
 		CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1AE512A0AE402007A1217 /* CompanyCell.swift */; };
 		CDC1AE542A0AE402007A1217 /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC1AE522A0AE402007A1217 /* CompanyCell.xib */; };
@@ -43,6 +44,7 @@
 		CD79CA8029F890690006E384 /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
 		CD98E66E2A425D970059620E /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
 		CD98E6702A42640B0059620E /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		CDB90C7F2A4CF24B0048220E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircularImage.swift"; sourceTree = "<group>"; };
 		CDC1AE512A0AE402007A1217 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		CDC1AE522A0AE402007A1217 /* CompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				CD0A2E432A3929B2001323FF /* ProductListView.swift */,
 				CD98E66E2A425D970059620E /* ProductRowView.swift */,
 				CD98E6702A42640B0059620E /* ProductDetailView.swift */,
+				CDB90C7F2A4CF24B0048220E /* WelcomeView.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */,
 				CD7139242A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld in Sources */,
 				CD0A2E412A3920EB001323FF /* HTTPClient.swift in Sources */,
+				CDB90C802A4CF24B0048220E /* WelcomeView.swift in Sources */,
 				CD7139262A1D7D2C002A8248 /* CoreDataManager.swift in Sources */,
 				CD614F3629EF4CEE0057E4AE /* SceneDelegate.swift in Sources */,
 				CDDE65222A01CBF900B205FF /* Company.swift in Sources */,

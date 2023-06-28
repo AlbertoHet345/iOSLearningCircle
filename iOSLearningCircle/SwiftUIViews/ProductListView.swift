@@ -14,16 +14,13 @@ struct ProductListView: View {
         NavigationView {
             List {
                 ForEach(0..<products.count, id: \.self) { index in
-//                    Text("\(products[index].title)")
-                    ProductRowView(product: products[index])
-                        .onTapGesture {
-                            NavigationLink {
-                                ProductDetailView(product: products[index])
-                            } label: {
-                                Text("")
-                            }
 
-                        }
+                    NavigationLink {
+                        ProductDetailView(product: products[index])
+                    } label: {
+                        ProductRowView(product: products[index])
+                    }
+
                 }
             }
             .navigationTitle(Text("Products"))
