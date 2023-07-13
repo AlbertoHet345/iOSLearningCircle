@@ -20,13 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 //        let controller = CompaniesController(style: .insetGrouped)
-//        let navController = UINavigationController(rootViewController: controller)
-//        window?.rootViewController = navController
-//        window?.makeKeyAndVisible()
-        
-        let controller = UIHostingController(rootView: ProductListView())
-        window?.rootViewController = controller
+        let controller = CollectionViewController()
+        let navController = UINavigationController(rootViewController: controller)
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
+        
+//        let controller = UIHostingController(rootView: WelcomeView())
+//        window?.rootViewController = controller
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

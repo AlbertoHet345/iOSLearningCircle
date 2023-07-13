@@ -24,6 +24,8 @@
 		CDC16DAC2A2FF1A100883192 /* UIImageView+CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */; };
 		CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1AE512A0AE402007A1217 /* CompanyCell.swift */; };
 		CDC1AE542A0AE402007A1217 /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC1AE522A0AE402007A1217 /* CompanyCell.xib */; };
+		CDCF88442A5F5C30007DCF68 /* CompaniesControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF88432A5F5C30007DCF68 /* CompaniesControllerWrapper.swift */; };
+		CDCF88472A5F6385007DCF68 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF88462A5F6385007DCF68 /* CollectionViewController.swift */; };
 		CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE651F2A01C4A600B205FF /* CompaniesController.swift */; };
 		CDDE65222A01CBF900B205FF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE65212A01CBF900B205FF /* Company.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		CDC16DAB2A2FF1A100883192 /* UIImageView+CircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircularImage.swift"; sourceTree = "<group>"; };
 		CDC1AE512A0AE402007A1217 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		CDC1AE522A0AE402007A1217 /* CompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
+		CDCF88432A5F5C30007DCF68 /* CompaniesControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesControllerWrapper.swift; sourceTree = "<group>"; };
+		CDCF88462A5F6385007DCF68 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		CDDE651F2A01C4A600B205FF /* CompaniesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesController.swift; sourceTree = "<group>"; };
 		CDDE65212A01CBF900B205FF /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +73,7 @@
 				CD614F3729EF4CEE0057E4AE /* ViewController.swift */,
 				CDDE651F2A01C4A600B205FF /* CompaniesController.swift */,
 				CD79CA8029F890690006E384 /* CreateCompanyController.swift */,
+				CDCF88462A5F6385007DCF68 /* CollectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 				CD98E66E2A425D970059620E /* ProductRowView.swift */,
 				CD98E6702A42640B0059620E /* ProductDetailView.swift */,
 				CDB90C7F2A4CF24B0048220E /* WelcomeView.swift */,
+				CDCF88432A5F5C30007DCF68 /* CompaniesControllerWrapper.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -129,11 +135,10 @@
 		CD614F3229EF4CEE0057E4AE /* iOSLearningCircle */ = {
 			isa = PBXGroup;
 			children = (
+				CDCF88452A5F634D007DCF68 /* UIKitControllers */,
 				CD0A2E422A39299A001323FF /* SwiftUIViews */,
 				CD0A2E3F2A39209C001323FF /* Service */,
 				CD0A2E3E2A392096001323FF /* Utils */,
-				CD0A2E3D2A39208E001323FF /* View */,
-				CD0A2E3C2A392083001323FF /* ViewController */,
 				CD614F3329EF4CEE0057E4AE /* AppDelegate.swift */,
 				CD614F3529EF4CEE0057E4AE /* SceneDelegate.swift */,
 				CD614F3929EF4CEE0057E4AE /* Main.storyboard */,
@@ -144,6 +149,15 @@
 				CD7139222A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld */,
 			);
 			path = iOSLearningCircle;
+			sourceTree = "<group>";
+		};
+		CDCF88452A5F634D007DCF68 /* UIKitControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A2E3D2A39208E001323FF /* View */,
+				CD0A2E3C2A392083001323FF /* ViewController */,
+			);
+			path = UIKitControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +241,13 @@
 				CDC1AE532A0AE402007A1217 /* CompanyCell.swift in Sources */,
 				CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */,
 				CD7139242A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld in Sources */,
+				CDCF88472A5F6385007DCF68 /* CollectionViewController.swift in Sources */,
 				CD0A2E412A3920EB001323FF /* HTTPClient.swift in Sources */,
 				CDB90C802A4CF24B0048220E /* WelcomeView.swift in Sources */,
 				CD7139262A1D7D2C002A8248 /* CoreDataManager.swift in Sources */,
 				CD614F3629EF4CEE0057E4AE /* SceneDelegate.swift in Sources */,
 				CDDE65222A01CBF900B205FF /* Company.swift in Sources */,
+				CDCF88442A5F5C30007DCF68 /* CompaniesControllerWrapper.swift in Sources */,
 				CDC16DAC2A2FF1A100883192 /* UIImageView+CircularImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
