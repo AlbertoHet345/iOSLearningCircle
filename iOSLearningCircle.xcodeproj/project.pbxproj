@@ -28,6 +28,7 @@
 		CDCF88472A5F6385007DCF68 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF88462A5F6385007DCF68 /* CollectionViewController.swift */; };
 		CDDE65202A01C4A600B205FF /* CompaniesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE651F2A01C4A600B205FF /* CompaniesController.swift */; };
 		CDDE65222A01CBF900B205FF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE65212A01CBF900B205FF /* Company.swift */; };
+		E81472242A68A57C005C2F41 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E81472232A68A57C005C2F41 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81472242A68A57C005C2F41 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +178,9 @@
 			dependencies = (
 			);
 			name = iOSLearningCircle;
+			packageProductDependencies = (
+				E81472232A68A57C005C2F41 /* SDWebImage */,
+			);
 			productName = iOSLearningCircle;
 			productReference = CD614F3029EF4CEE0057E4AE /* iOSLearningCircle.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +209,9 @@
 				Base,
 			);
 			mainGroup = CD614F2729EF4CEE0057E4AE;
+			packageReferences = (
+				E81472222A68A57C005C2F41 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = CD614F3129EF4CEE0057E4AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -466,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E81472222A68A57C005C2F41 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E81472232A68A57C005C2F41 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E81472222A68A57C005C2F41 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CD7139222A1D7662002A8248 /* iOSLearningCircleModels.xcdatamodeld */ = {
