@@ -21,6 +21,12 @@ class CollectionViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Pokédex"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPokedex()
@@ -66,7 +72,7 @@ extension CollectionViewController {
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: (view.frame.width / 2) - 16, height: (view.frame.height / 6) - 16)
+        CGSize(width: (view.frame.width / 2) - 32, height: (view.frame.height / 6) - 32)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -77,13 +83,17 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
         16
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    }
+    
 }
 
 class CustomCell: UICollectionViewCell {
     
     let label: UILabel = {
         let lb = UILabel()
-        lb.font = .systemFont(ofSize: 16)
+        lb.font = .boldSystemFont(ofSize: 16)
         lb.textColor = .white
         lb.text = "1"
         lb.translatesAutoresizingMaskIntoConstraints = false
@@ -102,24 +112,23 @@ class CustomCell: UICollectionViewCell {
         
         backgroundColor = .white
         
+        layer.cornerRadius = 25
+        
         addSubview(imageView)
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        addSubview(label)
+        label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
+        label.topAnchor.constraint(equalTo: topAnchor, constant: 16).isActive = true
     }
     
     func configure(pokemon: Pokemon) {
+        label.text = "#\(pokemon.id)"
         imageView.sd_setImage(with: URL(string: pokemon.imageUrl))
-        if pokemon.type == "poison" {
-            backgroundColor = .systemGreen
-        } else if pokemon.type == "fire" {
-            backgroundColor = .systemRed
-        } else if pokemon.type == "water" {
-            backgroundColor = .systemBlue
-        } else {
-            backgroundColor = .white
-        }
+        backgroundColor = pokemon.type.color
     }
     
     @available(*, unavailable)

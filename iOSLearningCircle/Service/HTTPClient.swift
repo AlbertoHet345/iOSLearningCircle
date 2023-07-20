@@ -76,7 +76,33 @@ struct Pokemon: Decodable {
     let id: Int
     let name: String
     let imageUrl: String
-    let type: String
+    let type: PokemonType
+}
+
+import UIKit
+
+enum PokemonType: String, Decodable {
+    case bug
+    case dragon
+    case electric
+    case fairy
+    case fighting
+    case fire
+    case flying
+    case ghost
+    case grass
+    case ground
+    case ice
+    case normal
+    case poison
+    case psychic
+    case rock
+    case steel
+    case water
+    
+    var color: UIColor {
+        UIColor(named: self.rawValue) ?? .white
+    }
 }
 
 extension Data{
